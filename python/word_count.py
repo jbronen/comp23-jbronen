@@ -14,6 +14,7 @@ except IOError:
     exit()
     
 a = []
+b = []
 
 for line in f:
     for word in line.split():
@@ -21,7 +22,12 @@ for line in f:
       
 a.sort()
 
-for i in a:
+b = set(a)
+b = list(b)
+b.sort()
+
+for i in b:
     print i, a.count(i)
 
 print "There are ", len(a), "words in this file"
+f.close()
