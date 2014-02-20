@@ -20,12 +20,13 @@ class Laser(pygame.sprite.Sprite):
 		
 		# Load the image
 		self.image = self.load_image('laser.gif')
-
+		self.screen = screen
+		self.image_w, self.image_h = self.image.get_size()
 		# Create a moving collision box
 		self.rect = self.image.get_rect()
 		self.rect.x = init_x
 		self.rect.y = init_y
-				
+		self.active = True		
 		# Set the default speed (dx, dy)
 		self.dy = init_y_speed
 				
