@@ -15,6 +15,14 @@ class Battlecruiser(pygame.sprite.Sprite):
             raise SystemExit, message
         return image.convert_alpha()
     
+    def load_sound(self, sound_name):
+        try:
+            sound = pygame.mixer.Sound(sound_name)
+        except pygame.error, message:
+            print "Cannot load sound: " + sound_name
+            raise SystemExit, message
+        return sound
+
     def __init__(self, screen, x, y):
         pygame.sprite.Sprite.__init__(self)
         self.image = self.load_image("assets/battlecruiser.gif")
@@ -33,7 +41,7 @@ class Battlecruiser(pygame.sprite.Sprite):
 
     def fire(self):
         new_laser = Laser(self.x + 50, self.y, -10)
-        laser_sound = pygame.mixer.Sound("assets/laser.wav")
+        laser_sound = self.load_sound("assets/laser.wav")
         laser_sound.play()
         self.lasers.add(new_laser)
     

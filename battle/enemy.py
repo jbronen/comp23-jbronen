@@ -16,6 +16,14 @@ class Enemy(pygame.sprite.Sprite):
             raise SystemExit, message
         return image.convert_alpha()
     
+    def load_sound(self, sound_name):
+        try:
+            sound = pygame.mixer.Sound(sound_name)
+        except pygame.error, message:
+            print "Cannot load sound: " + sound_name
+            raise SystemExit, message
+        return sound
+
     def __init__(self, screen, x, y, init_x_speed, init_y_speed):
         pygame.sprite.Sprite.__init__(self)
         self.image = self.load_image("assets/mutalisk.gif")
