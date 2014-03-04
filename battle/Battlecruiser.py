@@ -17,7 +17,7 @@ class Battlecruiser(pygame.sprite.Sprite):
     
     def __init__(self, screen, x, y):
         pygame.sprite.Sprite.__init__(self)
-        self.image = self.load_image("/assets/battlecruiser.gif")
+        self.image = self.load_image("assets/battlecruiser.gif")
         self.screen = screen
         self.x = 0
         self.y = 0
@@ -33,6 +33,8 @@ class Battlecruiser(pygame.sprite.Sprite):
 
     def fire(self):
         new_laser = Laser(self.x + 50, self.y, -10)
+        laser_sound = pygame.mixer.Sound("assets/laser.wav")
+        laser_sound.play()
         self.lasers.add(new_laser)
     
     def draw(self):
@@ -62,7 +64,7 @@ class Laser(pygame.sprite.Sprite):
 		pygame.sprite.Sprite.__init__(self) #call Sprite intializer
 		
 		# Load the image
-		self.image = self.load_image('laser.gif')
+		self.image = self.load_image('assets/laser.gif')
 
 		# Create a moving collision box
 		self.rect = self.image.get_rect()
