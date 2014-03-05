@@ -27,8 +27,8 @@ class Battlecruiser(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.image = self.load_image("assets/battlecruiser.gif")
         self.screen = screen
-        self.x = 0
-        self.y = 0
+        self.x = x
+        self.y = y
         self.dx = 0
         self.dy = 0
         self.lasers = pygame.sprite.Group()

@@ -38,6 +38,7 @@ class Enemy(pygame.sprite.Sprite):
         self.rect.topleft = (self.x, self.y)
         self.rect.bottomright = (self.x + self.image_w, self.y + self.image_h)
         self.active = True
+        self.points_accounted = False
     
     def draw(self):
         self.screen.blit(self.image, (self.x, self.y))
