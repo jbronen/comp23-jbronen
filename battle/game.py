@@ -111,7 +111,7 @@ while True:
 		# Update and redraw all sprites
             for sprite in enemy_sprites:
                 if pygame.sprite.collide_rect(sprite, player):
-                    if sprite.active:
+                    if not sprite.exploded:
                         death = player.load_sound("assets/death_explode.wav")
                         death.play()
                         print "WE PLAYED THE SOUND!"

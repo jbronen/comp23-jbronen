@@ -38,29 +38,32 @@ class Enemy(pygame.sprite.Sprite):
         self.rect.topleft = (self.x, self.y)
         self.rect.bottomright = (self.x + self.image_w, self.y + self.image_h)
         self.active = True
+        self.exploded = False
         self.points_accounted = False
     
     def draw(self):
         self.screen.blit(self.image, (self.x, self.y))
     
     def update(self):
-        if ((self.x + self.dx) <= 0):
+        if not self.exploded:
+            if ((self.x + self.dx) <= 0):
        		self.dx = self.dx * -1
-        if ((self.x + self.dx) >= self.screen.get_size()[0]):		      
-            self.dx = self.dx * -1
-        if ((self.y + self.dy) <= 0):
-            self.dy = self.dy * -1
-        if ((self.y + self.dy) >= self.screen.get_size()[1]):
-            self.dy = self.dy * -1
-        self.x = self.x + self.dx
-        self.y = self.y + self.dy
-        self.rect.move(self.x, self.y)
-        self.rect.topleft = (self.x, self.y)
-        self.rect.bottomright = (self.x + self.image_w, self.y + self.image_h)
+            if ((self.x + self.dx) >= self.screen.get_size()[0]):
+                self.dx = self.dx * -1
+            if ((self.y + self.dy) <= 0):
+                self.dy = self.dy * -1
+            if ((self.y + self.dy) >= self.screen.get_size()[1]):
+                self.dy = self.dy * -1
+            self.x = self.x + self.dx
+            self.y = self.y + self.dy
+            self.rect.move(self.x, self.y)
+            self.rect.topleft = (self.x, self.y)
+            self.rect.bottomright = (self.x + self.image_w, self.y + self.image_h)
 
     def die(self):
-        self.load_image("assets/laser_explosion.gif")
-        self.active = False
+        self.image = self.load_image("assets/laser_explosion.gif")
+        self.exploded = True
+        self.active = True
 
 if __name__ == "__main__":
 	# Check if sound and font are supported
