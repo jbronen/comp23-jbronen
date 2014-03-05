@@ -118,7 +118,7 @@ while True:
                         player.active = False
                 if pygame.sprite.spritecollideany(sprite, player.lasers):
                     sprite.die()
-                    if sprite.points_accounted:
+                    if not sprite.points_accounted:
                         points = points + 100
                     sprite.points_accounted = True
                 if sprite.active:
