@@ -42,7 +42,7 @@ class ScrollingBackground(pygame.sprite.Sprite):
 
 def render_game_over(screen):
     font = pygame.font.Font(None, 72)
-    game_over = font.render("GAME OVER",1,(0,0,0))
+    game_over = font.render("GAME OVER",1,(255,255,255))
     screen.blit(game_over,(100,100))
 
 
@@ -112,7 +112,9 @@ while True:
             for sprite in enemy_sprites:
                 if pygame.sprite.collide_rect(sprite, player):
                     if sprite.active:
-                        player.load_sound("assets/death_explode.wav")
+                        death = player.load_sound("assets/death_explode.wav")
+                        death.play()
+                        print "WE PLAYED THE SOUND!"
                         player.active = False
                 if pygame.sprite.spritecollideany(sprite, player.lasers):
                     sprite.die()
