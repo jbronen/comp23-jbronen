@@ -1,9 +1,10 @@
 # README.txt
 # Jared Bronen
-# Comp 23 - Lab 3
+# Comp 23 - Lab 4
 
-1. Lasers.py is correctly implemented, Battlecruiser.py is correctly implemented
-   as well, but holding down keys to move does not work.
-2. I took Laser-groups.py from the examples in the github repository.
-   I changed it to match the specifications of the assignment.
-3. I spent approximately 5 hours on this assignment. 
+1. I believe everything is correctly implemented, but I'm not sure about the
+   sidescrolling feel.
+2. I discussed the assignment with Jessie Chapman, but we didn't not share any
+   actual algorithms for our code. I also used examples and other .py files
+   from the GameDevelopment folder provided for us by the course.
+3. I spent approximately 8 hours on this assignment.

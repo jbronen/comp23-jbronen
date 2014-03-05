@@ -72,7 +72,6 @@ if __name__ == "__main__":
     for i in range(NUM_ENEMIES):
         enemy_sprites.append(Enemy(screen, randint(1, SCREEN_WIDTH), randint(1,SCREEN_HEIGHT/2), randint(1, MAX_SPEED), randint(1, MAX_SPEED)))
     
-    BACKGROUND_COLOR = (255, 255, 255)
     background = ScrollingBackground(screen, 0)
     points = 0
 
@@ -102,7 +101,6 @@ while True:
                             player.fire()
 
 		# Redraw the background
-       	screen.fill(BACKGROUND_COLOR)
         player.update()
         if player.active:
             background.update()
