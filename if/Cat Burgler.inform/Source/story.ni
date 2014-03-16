@@ -1,10 +1,10 @@
-"The Tale of the Cat Burgler" by Jared Bronen
+"The Tale of the Cat Burglar" by Jared Bronen
 
 The maximum score is 12.
 
 The Van is a room.
 There is a cupcake in the Van. The cupcake is edible.
-The description of the Van is "The haggard, beat-up van you're in is parked outside the Willingsworth mansion. You, my friend, are a cat burgler, which is to say you burgle cats. To the south is the mansion lobby."
+The description of the Van is "The haggard, beat-up van you're in is parked outside the Willingsworth mansion. You, my friend, are a cat burglar, which is to say you burgle cats. To the south is the mansion lobby."
 The description of the cupcake is "An old cupcake with chocolate frosting and some sprinkles that probably weren't always green... you think the smell of the van might actually be coming from the cupcake. 'Gross', you mumble to yourself."
 Instead of eating the cupcake:
 	end the story finally saying "I recommend examining something before you eat it!"
@@ -81,21 +81,21 @@ After taking the book for the first time:
 
 The Second Floor Lobby is a room. It is up from the Main Lobby. The description of the Second Floor Lobby is "You have entered the Second Floor Lobby. You hear voices coming from the East, South, and West. To the East is the master bedroom. To the west is the Second Floor Closet. To the South is the Vault Room. You think about going in there (who wouldn't keep cats in their vault room?)."
 
-The Master Bedroom is a room. It is east of the Second Floor Lobby. The description of the Master Bedroom is "The Master Bedroom is quite possibly the single fanciest room you've had the privelage of standing in. Enormous murals of the Willingsworth couple and their cats adorn the walls. The Bed, sized 'God-King' is a behemoth piece of furniture in the center of the room. In the Master Bedroom is a man... A man carrying a bag... A bag full of cats! You have encountered a 2nd Cat Burgler. He's wearing a t-shirt that says, 'I sure do love pastries and eat them without looking at them regularly.' You have some options how to approach this one: kill the thief and take his cats, ask him about cats, or simply walk away. Up to you. But remember, violence is not always the answer. But sometimes it is.".
-Second Cat Burgler is a man in the Master bedroom. The description of the Second Cat Burgler is "A Handsome young fellow. A lot of stains on his shirt though. He's actually really dirty. Doesn't seem to have the greatest sense of hygiene."
+The Master Bedroom is a room. It is east of the Second Floor Lobby. The description of the Master Bedroom is "The Master Bedroom is quite possibly the single fanciest room you've had the privelage of standing in. Enormous murals of the Willingsworth couple and their cats adorn the walls. The Bed, sized 'God-King' is a behemoth piece of furniture in the center of the room. In the Master Bedroom is a man... A man carrying a bag... A bag full of cats! You have encountered a 2nd Cat burglar. He's wearing a t-shirt that says, 'I sure do love pastries and eat them without looking at them regularly.' You have some options how to approach this one: kill the thief and take his cats, ask him about cats, or simply walk away. Up to you. But remember, violence is not always the answer. But sometimes it is.".
+Second Cat burglar is a man in the Master bedroom. The description of the Second Cat burglar is "A Handsome young fellow. A lot of stains on his shirt though. He's actually really dirty. Doesn't seem to have the greatest sense of hygiene."
 
-The Dead Cat Burgler is a thing. It is not portable. "A man who you chose to murder in order to steal more cats. What a life you live."
+The Dead Cat burglar is a thing. It is not portable. "A man who you chose to murder in order to steal more cats. What a life you live."
 A Cat named Diane is a thing. A Cat named Staci is a thing.
 
-Instead of giving the cupcake to the Second Cat Burgler:
-	remove the Second Cat Burgler from play;
-	move the Dead Cat Burgler to the Master Bedroom;
+Instead of giving the cupcake to the Second Cat burglar:
+	remove the Second Cat burglar from play;
+	move the Dead Cat burglar to the Master Bedroom;
 	move Cat named Diane to the Master Bedroom;
 	move Cat named Staci to the Master Bedroom;
 	say "You tricked him. He ate the meat. He is dead! Out from his cat-bag crawl two cats, Diane and Staci (that's with an i, mind you!)"
 
-After asking the Second Cat Burgler about "cats":
-	say "The second cat burgler looks you in the eyes. 'I would steal to cats to feed my family... If I had a family! Alas I steal the cats, sell the cats, and use the money to buy food that to eat myself that is not made out of cats!' You are weirded out."
+After asking the Second Cat burglar about "cats":
+	say "The second cat burglar looks you in the eyes. 'I would steal to cats to feed my family... If I had a family! Alas I steal the cats, sell the cats, and use the money to buy food that to eat myself that is not made out of cats!' You are weirded out."
 
 After taking the Cat named Diane for the first time:
 	increase the score by 1;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-0x1efe980" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+<Skein rootNode="node-0xfc7980" xmlns="http://www.logicalshift.org.uk/IF/Skein">
   <generator>GNOME Inform 7</generator>
-  <activeNode nodeId="node-0x1efe980"/>
-  <item nodeId="node-0x1efe980">
+  <activeNode nodeId="node-0xfc7980"/>
+  <item nodeId="node-0xfc7980">
     <command xml:space="preserve">- start -</command>
     <result xml:space="preserve">
 
