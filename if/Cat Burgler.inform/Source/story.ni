@@ -1,6 +1,6 @@
 "The Tale of the Cat Burgler" by Jared Bronen
 
-[UNLEARNED IN DANCE ATTRIBUTE!]
+The maximum score is 12.
 
 The Van is a room.
 There is a cupcake in the Van. The cupcake is edible.
@@ -29,18 +29,24 @@ The piece of meat is edible. The description of the piece of meat is "Definitely
 Instead of eating the piece of meat:
 	end the story finally saying "I recommend examining food before it eating it!"
 
-A person can be either learned in dance or unlearned in dance.
-[The player is unlearned in dance.]
-
 The TV Room is a room. It is south of the kitchen. The description of the TV Room is "You stand on top of a green carpet with red stains. 'Wine?' you ask yourself. You see the TV's and want to relax. You see a crate behind the Cracked TV. To the North is the Kitchen. To the west is the Living Room."
 
 Crate is an open container in the TV Room. It is not portable.
 A Cat named Kyle is a thing.
 
-The Tube TV is a device in the TV Room. It is switched off. It is not portable.The Cracked TV is a device in the TV Room. It is switched off. It is not portable.
-After switching on the Tube TV, say "You turn on the Tube TV. 'Dancing for Fictional Thiefs' plays. You keep watching, and after a little while start practicing along with the program. You have learned the art of dance." [Player is learned in dance.]
 
-After switching on the Cracked TV:
+canSingWell is a number that varies. canSingwell is 0.
+The Tube TV is a device in the TV Room. It is switched off. It is not portable.The Cracked TV is a device in the TV Room. It is switched off. It is not portable.
+After switching on the Tube TV for the first time:
+	increment canSingWell;
+	say "You turn on the Tube TV. 'Singing for Fictional Thiefs' plays. You keep watching, and after a little while start practicing along with the program. You have learned the art of song."
+
+Instead of singing:
+	if canSingWell is 1, say "You are a true master of voice and song.";
+	if canSingWell is 0, say "You could use some lessons."
+
+
+After switching on the Cracked TV for the first time:
 	Move the Cat named Kyle to crate;
 	Say "You turn on the Cracked TV. A program titled, 'The Universe of Animals' is on. You sit down to watch it, and a segment on big cats comes up. After a commercial break, a lion roars across the screen. You hear a purr from behind the television."
 
@@ -75,10 +81,10 @@ After taking the book for the first time:
 
 The Second Floor Lobby is a room. It is up from the Main Lobby. The description of the Second Floor Lobby is "You have entered the Second Floor Lobby. You hear voices coming from the East, South, and West. To the East is the master bedroom. To the west is the Second Floor Closet. To the South is the Vault Room. You think about going in there (who wouldn't keep cats in their vault room?)."
 
-The Master Bedroom is a room. It is east of the Second Floor Lobby. The description of the Master Bedroom is "The Master Bedroom is quite possibly the single fanciest room you've had the privelage of standing in. Enormous murals of the Willingsworth couple and their cats adorn the walls. The Bed, sized 'God-King' is a behemoth piece of furniture in the center of the room. In the Master Bedroom is a man... A man carrying a bag... A bag full of cats! You have encountered a 2nd Cat Burgler. He's wearing a t-shirt that says, 'I sure do love pastries and eat them without looking at them regularly.' You have some options how to approach this one: kill the thief and take his cats, tell him 'I know why you're here', or simply walk away. Up to you. But remember, violence is not always the answer. But sometimes it is.".
-Second Cat Burgler is a man in the Master bedroom. [DESCRIPTION]
+The Master Bedroom is a room. It is east of the Second Floor Lobby. The description of the Master Bedroom is "The Master Bedroom is quite possibly the single fanciest room you've had the privelage of standing in. Enormous murals of the Willingsworth couple and their cats adorn the walls. The Bed, sized 'God-King' is a behemoth piece of furniture in the center of the room. In the Master Bedroom is a man... A man carrying a bag... A bag full of cats! You have encountered a 2nd Cat Burgler. He's wearing a t-shirt that says, 'I sure do love pastries and eat them without looking at them regularly.' You have some options how to approach this one: kill the thief and take his cats, ask him about cats, or simply walk away. Up to you. But remember, violence is not always the answer. But sometimes it is.".
+Second Cat Burgler is a man in the Master bedroom. The description of the Second Cat Burgler is "A Handsome young fellow. A lot of stains on his shirt though. He's actually really dirty. Doesn't seem to have the greatest sense of hygiene."
 
-The Dead Cat Burgler is a thing. It is not portable. [DESCRIPTION]
+The Dead Cat Burgler is a thing. It is not portable. "A man who you chose to murder in order to steal more cats. What a life you live."
 A Cat named Diane is a thing. A Cat named Staci is a thing.
 
 Instead of giving the cupcake to the Second Cat Burgler:
@@ -88,24 +94,56 @@ Instead of giving the cupcake to the Second Cat Burgler:
 	move Cat named Staci to the Master Bedroom;
 	say "You tricked him. He ate the meat. He is dead! Out from his cat-bag crawl two cats, Diane and Staci (that's with an i, mind you!)"
 
+After asking the Second Cat Burgler about "cats":
+	say "The second cat burgler looks you in the eyes. 'I would steal to cats to feed my family... If I had a family! Alas I steal the cats, sell the cats, and use the money to buy food that to eat myself that is not made out of cats!' You are weirded out."
+
 After taking the Cat named Diane for the first time:
 	increase the score by 1;
-	say "Witty message about stealing cats" [THINK OF SOMETHING]
+	say "Another cat in the bag (literally)"
 	
 After taking the Cat named Staci for the first time:
 	increase the score by 1;
-	say "Witty lil something about stealing cats" [THINK OF SOMETHING]
+	say "This cat will serve you well...somehow. You will figure that out later."
 	
 
 
-The Second Floor Closet is a room. It is west of the Second Floor Lobby. The description of the Second Floor Closet is "BLA" [FINISH DESCRIPTION, READ POEM TO OLD LADY AND CAT COMES DOWN FROM SHELF]
+The Second Floor Closet is a room. It is west of the Second Floor Lobby. The description of the Second Floor Closet is "A closet filled with old people's clothes. You like the style quite a bit and look forward to your time spent as an old person. 'I should see a therapist for a lot of different reasons,' you think."
+Mrs Willingsworth is a woman in the Second Floor Closet. The description of Mrs Willingsworth is "The heiress the Willingsworth fortune. This family made their money in arms profiteering. Who knew there was so much money in prostethics. She looks frail, but carries a big smile on her face. She asks you, 'Would like me to read you a poem?' You say, 'sure.' 'But I don't know any poems!'"
 
-The Guest Bedroom is a room. It is south of the Second Floor Closet. The description of the Guest Bedroom is "BLA" [FINISH DESCRIPTION, put in old man who talks about how guard just wants a dance partner and desk that can be moved to reveal secret tunnel.]
+A Cat named Brian is a thing.
+Instead of giving the book to Mrs Willingsworth:
+	move Cat named Brian to the Second Floor Closet;
+	say "You give Mrs. Willingsworth your book of poems. 'Let me find my favorite.' You wait patiently as she flips through each page, licking her very dry fingers for every turn. Finally, she stops. 'Who Shalt Be Punished? by Brooker Tree Drewitt,' she reads, [line break] [line break] 'Oh ye unfaithful, sly, sickly man, who hath lept from the high path towards God. [line break] Here you lie, a snake slivering towards greed and finite, fleeting happiness, unable to fathom the grace of God's light. [line break] What is it the bends the minds of men towards sin? [line break] Can we define a precursor for evil. [line break] We do not know. But in the meantime, respect other people's property.' [line break][line break] You hear a soft meow from behind an old jacket; it must have liked the poem."
 
-The Vault Door is a Door. It is south of the Second Floor Lobby. It is north of the Vault Room. It is locked. The description of the Vault Door is "BLA". [can see guard, better not go in there!]
+After taking the Cat named Brian for the first time:
+	increase the score by 1;
+	say "You are going to be rich! [line break] if you ever get around to changing your name to Richard."
+	
 
-The Vault Room is a room. It is south of the Vault Door. It is east of the Guest Bedroom. The description is "BLA." [finish description, guard, vault key etc]
+The Guest Bedroom is a room. It is south of the Second Floor Closet. The description of the Guest Bedroom is "The guest bedroom is small and desolate. Something about this room deeply upsets you. Maybe it reminds you of your own upbringing. Standing in the room is Mr. Willingsworth, who manages the Willingsworth fortune."
 
+Mr Willingsworth is a man in the Guest Bedroom. The description of Mr Willingsworth is "A man of great statue. His prowess in the sales of artificial limbs are simply unrivaled. His only weakness, a deep affectionate love for his wife and his cats. Without either of them, he would no longer be able to carry on the life-changing work he continues to do to this very day! You think about asking him about the vault room."
+
+After asking Mr Willingsworth about "vault room":
+	say "Mr. Willingsworth gives you a stern look. 'I see you wish to enter the vault room,' he sighs, 'that's fine I suppose. We need someone to cheer the guard up. Are you any good at singing? Try singing him a song maybe... Only if you're good though! If you aren't the dude might kill ya! If you are good though, he might have something for ya.'"
+	
+After asking Mr Willingsworth about "the vault room":
+	say "Mr. Willingsworth gives you a stern look. 'I see you wish to enter the vault room,' he sighs, 'that's fine I suppose. We need someone to cheer the guard up. Are you any good at singing? Try singing him a song maybe... Only if you're good though! If you aren't the dude might kill ya! If you are good though, he might have something for ya.'"
+
+The Vault Door is a Door. It is south of the Second Floor Lobby. It is north of the Vault Room. It is locked. The description of the Vault Door is "A heavy door with the inscription 'NOTHING OF VALUE IN HERE'".
+
+The Vault Room is a room. It is south of the Vault Door. It is east of the Guest Bedroom. The description is "You have made it to the vault room. This is it. You hear very loud meowing coming from inside the vault. 'Must be a whole goddamn litter in there,' you think. You approach the guard cautiously. The two of you lock eyes."
+The Guard is a man in the Vault Room. The description of the Guard is "A bear of a man. But you sense a deep sadness in his eyes. You ask him if he needs anything, a tissue perhaps. He says, 'No. Nothing really. I just wish someone could cheer me up. But no one knows how to sing, at least sing well!"
+The Main Vault is a locked, closed container in the Vault Room. The Bag of Cats is a thing in the Main Vault.
+The description of the Main Vault is "A large, iron vault. The meowing coming from it is loud and intense."
+The description of the Bag of Cats is "A bag filled with cats. 'Jackpot!' you think."
+
+Instead of singing in the Vault Room:
+	if canSingWell is 0, say "The guard is infuriated with your terrible voice. He screams and writhes in his fury. You stand still, locked from fright. He pulls out a dagger. You try to run for the door, but are not quick enough.";
+	if canSingWell is 0, end the game in death;
+	if canSingWell is 1, increase the score by 6;
+	if canSingWell is 1, say "The guard is deeply moved by your masterful voice. Your rendition of 'Happy Birthday' is one of the best renditions of all time. He unlocks the Main Vault, handing you the bag of cats. You look inside. 6 of the finest cats you've ever seen! 'This is treasure,' you think to yourself. You can leave the Willingsworth mansion happy and rich.";
+	if canSingWell is 1, end the game in victory.
 
 
 
